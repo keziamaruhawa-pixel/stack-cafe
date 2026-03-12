@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Purchase Item</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+     <body class="fade-in">
+
+<div class="form-container">
+  <h2>Purchase</h2>
+
+  <form id="purchaseForm">
+
+    <label>Name</label>
+    <input type="text" id="pName" required>
+
+    <label>Item</label>
+    <select id="pItem">
+      <option data-price="12000">Croissant - Rp12.000</option>
+      <option data-price="25000">Baguette - Rp25.000</option>
+      <option data-price="18000">Chocolate Bread - Rp18.000</option>
+    </select>
+
+    <label>Price</label>
+    <input type="text" id="pPrice" readonly>
+
+    <label>Quantity</label>
+    <input type="number" id="pQty" value="1" min="1">
+
+    <label>Total</label>
+    <input type="text" id="pTotal" readonly>
+
+    <button id="buyBtn" type="submit" class="buy-animated">
+      Buy
+    </button>
+  </form>
+
+  <p class="small"><a href="home.html" target="contentFrame">Back Home</a></p>
+</div>
+
+
+<!-- 🔥 POPUP INVOICE -->
+<div class="invoice-overlay" id="invoicePopup">
+  <div class="invoice-box">
+    <h2>Invoice</h2>
+    <p><b>Name:</b> <span id="invName"></span></p>
+    <p><b>Item:</b> <span id="invItem"></span></p>
+    <p><b>Price:</b> <span id="invPrice"></span></p>
+    <p><b>Quantity:</b> <span id="invQty"></span></p>
+    <p><b>Total:</b> <span id="invTotal"></span></p>
+
+    <button class="close-inv" onclick="closeInvoice()">Close</button>
+  </div>
+</div>
+
+<script src="purchase.js"></script>
+
+</body>
+</html>

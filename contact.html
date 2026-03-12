@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <style>
+        header p {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <main>
+            <form name="contactForm">
+                <div class="form-group">
+                    <label for="fullName">Fullname:</label>
+                    <input type="text" id="fullName" name="fullName">
+                </div>
+                <div class="form-group">
+                    <label for="password">Make password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="message">Massage or suggestion:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Leave a date detail"></textarea>
+                </div>
+                <div class="form-group radio-group">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Question:</label>
+                    <select id="topic" name="topic">
+                        <option value="">Select your problem</option>
+                        <option value="produk">Product</option>
+                        <option value="pesanan">Exclusive order</option>
+                        <option value="keluhan">Complaint</option>
+                        <option value="lainnya">Others</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="submit-btn">
+                </div>
+            </form>
+        </main>
+    </div>
+    </div><!-- ====== FOOTER START ====== -->
+<footer class="bakery-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>🍞 The Zaksly's</h3>
+      <p>
+        We bake happiness every day! Our breads are made from organic ingredients, 
+        freshly prepared with love and passion.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="bread.html">Breads</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="testimoni.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p>📍 123<sup>rd</sup> Jl.nya when yah, Bekasi Regency, West Java</p>
+      <p>📞 +62 812 3456 7890</p>
+      <p>📧 hello@bakeryhouse.com</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Bakery House — Freshly baked with ❤ every day</p>
+  </div>
+</footer>
+<!-- ====== FOOTER END ====== -->
+
+<!-- Font Awesome (ikon media sosial) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+// ==== LOGIN PROTECTION ====
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Please login first!");
+    window.top.location.href = "login.html"; 
+}
+</script>
+<script>
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    alert("You have been logged out.");
+    window.top.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

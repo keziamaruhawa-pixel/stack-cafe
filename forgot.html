@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Reset Password</h2>
+
+  <form id="forgotForm">
+    <label>Registered Email</label>
+    <input type="email" id="fpEmail">
+
+    <button type="submit">Find Account</button>
+  </form>
+
+  <div id="resetArea" style="display:none;">
+    <label>New Password</label>
+    <input type="password" id="newPwd">
+
+    <button id="resetBtn">Reset Password</button>
+  </div>
+
+  <p class="small"><a href="login.html">Back to Login</a></p>
+</div>
+
+<script src="forgot.js"></script>
+
+</body>
+</html>

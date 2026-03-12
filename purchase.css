@@ -1,0 +1,70 @@
+/* ANIMASI BUY BUTTON */
+.buy-animated {
+    background: #b98d58;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-animated:hover {
+    background: #86561A;
+    transform: scale(1.05);
+}
+
+.buy-animated:active {
+    transform: scale(0.92);
+}
+
+/* POPUP INVOICE */
+.invoice-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.invoice-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    animation: pop 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.invoice-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;     /* lebar full kayak halaman */
+    margin: auto;
+    animation: pop 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
+}
+
+
+@keyframes pop {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-inv {
+    width: 100%;
+    padding: 10px;
+    background: #b98d58;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.close-inv:hover {
+    background: #86561a;
+}

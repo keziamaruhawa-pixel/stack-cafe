@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bread</title>
+    <link rel="stylesheet" href="bread.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        /* --- STYLES FOR THE NEW FEATURES --- */
+        
+        /* Image Display Area */
+        #image-display {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            min-height: 100px; /* Gives it a visible space */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image-display img {
+            max-width: 150px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Make the bread names clickable */
+        table tbody tr td:first-child {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* --- Clear Toggle Switch Styling --- */
+        .clear-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #d4a373;
+            background-color: #f8e7c9;
+            border-radius: 8px;
+        }
+        
+        /* Reuse the switch CSS from the previous example */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 45px;
+          height: 25px;
+        }
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ffffff;
+          transition: .4s;
+          border-radius: 34px;
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 17px;
+          width: 17px;
+          left: 4px;
+          bottom: 4px;
+          background-color: #f8e7c9;
+          transition: .4s;
+          border-radius: 50%;
+        }
+        input:checked + .slider {
+          background-color: #d4a373; /* Red color for 'clearing' */
+        }
+        input:checked + .slider:before {
+          transform: translateX(20px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Products</h1>
+        </header>
+        <main>
+            <h2>Price list</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bread-name">Baguette</td>
+                        <td>Premium</td>
+                        <td>Rp 25.000</td>
+                    </tr>
+                    <tr>
+                        <td class="bread-name">Croissant</td>
+                        <td>Premium</td>
+                        <td>Rp 45.000</td>
+                    </tr>
+                    <tr>
+                        <td class="bread-name">Wheat bread</td>
+                        <td>Classic</td>
+                        <td>Rp 20.000</td>
+                    </tr>
+                    <tr>
+                        <td class="bread-name">Chocolate bread</td>
+                        <td>Classic</td>
+                        <td>Rp 15.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Wanna View Our Goods?</h2>
+            <div id="image-display">
+                <p>Click on any bread name in the table above to display its image.</p>
+            </div>
+            
+            <div class="clear-section">
+                <p>Instantly Erase All Images:</p>
+                <label class="switch">
+                    <input type="checkbox" id="clear-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <h2>Most bought!</h2>
+            <ol>
+                <li>Croissant</li>
+                <li>Baguette</li>
+                <li>Chocolate bread</li>
+            </ol>
+            <h2>Our fresh ingredients</h2>
+            <ul>
+                <li>Organic Wheat Flour</li>
+                <li>Natural Yeast</li>
+                <li>Sea Salt</li>
+                <li>Fresh Water</li>
+            </ul>
+        </main>
+    </div><!-- ====== FOOTER START ====== -->
+    <footer class="bakery-footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>🍞 The Zaksly's</h3>
+          <p>
+            We bake happiness every day! Our breads are made from organic ingredients, 
+            freshly prepared with love and passion.
+          </p>
+        </div>
+
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="bread.html">Breads</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="testimoni.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact">
+          <h4>Contact Us</h4>
+          <p>📍 123<sup>rd</sup> Jl.nya when yah, Bekasi Regency, West Java</p>
+          <p>📞 +62 812 3456 7890</p>
+          <p>📧 hello@bakeryhouse.com</p>
+        </div>
+
+        <div class="footer-section social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Bakery House — Freshly baked with ❤ every day</p>
+      </div>
+    </footer>
+    <!-- ====== FOOTER END ====== -->
+
+    <!-- Font Awesome (ikon media sosial) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    // ==== LOGIN PROTECTION ====
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        alert("Please login first!");
+        window.top.location.href = "login.html"; 
+    }
+    </script>
+    <script>
+    function logout() {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("currentUser");
+        alert("You have been logged out.");
+        window.top.location.href = "login.html";
+    }
+    </script>
+    <script>
+      // 1. Image data mapping
+      const breadImages = {
+          'Baguette': 'baguette.jpg',
+          'Croissant': 'croissant.jpg',
+          'Wheat bread': 'wheat-bread.jpg',
+          'Chocolate bread': 'chocolate-bread.jpg'
+      };
+
+      // 2. Track which breads are currently spawned
+      let spawnedBreads = new Set();
+
+      // Ensure the script runs only after the whole page is loaded
+      $(document).ready(function() { 
+          
+          const $imageDisplay = $('#image-display'); 
+          
+          // ----------------------------------------------------
+          // A) CLICK EVENT: SPAWN ONCE + WARNING
+          // ----------------------------------------------------
+
+          // Attach the click event listener to all bread name cells
+          $('td.bread-name').on('click', function() {
+              
+              const breadName = $(this).text().trim();
+              const imgSrc = breadImages[breadName];
+
+              // CHECK: Is this bread already on the screen?
+              if (spawnedBreads.has(breadName)) {
+                  alert(`⚠️ The ${breadName} image is already there!`);
+                  return; 
+              }
+
+              if (imgSrc) {
+                  // Remove the initial instruction message
+                  $imageDisplay.find('p').remove();
+
+                  // Create and append the image
+                  const $newImage = $('<img>')
+                                      .attr('src', imgSrc)
+                                      .attr('alt', breadName);
+                  
+                  $imageDisplay.append($newImage);
+
+                  // Add this bread name to our Tracking List
+                  spawnedBreads.add(breadName);
+                  
+                  console.log(`Spawned: ${breadName}`);
+              }
+          });
+
+
+          // ----------------------------------------------------
+          // B) CHANGE EVENT: CLEAR EVERYTHING
+          // ----------------------------------------------------
+          
+          // Attach the change event listener to the clear toggle switch
+          $('#clear-toggle').on('change', function() {
+              
+              // Check if the input is checked
+              if ($(this).is(':checked')) { 
+                  
+                  // 1. Clear the HTML screen
+                  $imageDisplay.html('<p>Images have been cleared by the switch.</p>');
+                  
+                  // 2. Clear our JavaScript Tracking List 
+                  spawnedBreads.clear();
+                  
+                  console.log("Images cleared and tracker reset.");
+                  
+                  // 3. Reset switch visual
+                  const $self = $(this);
+                  setTimeout(() => {
+                      $self.prop('checked', false); 
+                  }, 500); 
+
+              }
+          });
+
+      });
+    </script>
+
+
+</body>
+</html>
+    

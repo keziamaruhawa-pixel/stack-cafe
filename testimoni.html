@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials</title>
+  <link rel="stylesheet" href="testimoni.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="text-box">
+      <h1>Our Happy Customers</h1>
+    </div>
+
+    <section id="testimonials">
+      <h2>What Our Customers Say</h2>
+
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “The breads are always fresh and soft! I can really taste the quality ingredients they use.”
+          </p>
+          <h4>— Luo Stephanie Wijaya</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Their chocolate bread is to die for — sweet, fluffy, and baked to perfection.”
+          </p>
+          <h4>— M. Azka Najhan</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “I love how the staff greets you with a smile every time. You can feel the warmth in every loaf.”
+          </p>
+          <h4>— Kezia Larita Maruhawa</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “You can taste the love and passion in every bite. It's more than just bread — it's comfort food.”
+          </p>
+          <h4>— Kallysta Kimiko Heryaning</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “The smell of freshly baked bread reminds me of my childhood. This bakery brings that feeling back.”
+          </p>
+          <h4>— Zahara Shabilla Putri</h4>
+        </div>
+
+    </section>
+   </div><!-- ====== FOOTER START ====== -->
+<footer class="bakery-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>🍞 The Zaksly's</h3>
+      <p>
+        We bake happiness every day! Our breads are made from organic ingredients, 
+        freshly prepared with love and passion.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="bread.html">Breads</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="testimoni.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p>📍 123<sup>rd</sup> Jl.nya when yah, Bekasi Regency, West Java</p>
+      <p>📞 +62 812 3456 7890</p>
+      <p>📧 hello@bakeryhouse.com</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Bakery House — Freshly baked with ❤ every day</p>
+  </div>
+</footer>
+<!-- ====== FOOTER END ====== -->
+
+<!-- Font Awesome (ikon media sosial) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+// ==== LOGIN PROTECTION ====
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Please login first!");
+    window.top.location.href = "login.html"; 
+}
+</script>
+<script>
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    alert("You have been logged out.");
+    window.top.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

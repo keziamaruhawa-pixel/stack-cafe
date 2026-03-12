@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body {
+    color: #333;
+    margin: 0;
+    background-image: url(assets/bread.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@keyframes fadeInUp{
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #f8e7c9, #ffffff);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.container:nth-of-type {
+  animation-delay: 0.3s;
+}
+
+h1 {
+    font-family: "Poppins";
+    text-align: center;
+    color: #5a3e2b;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-family: "Nunito";
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select option{
+  font-family: "Josefin sans";
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.radio-group label, .checkbox-group label {
+    font-family: "Josefin sans";
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.submit-btn {
+    font-family: "Nunito";
+    display: inline-block;
+    background-color: #5a3e2b;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.submit-btn:hover {
+    background-color: #e7a61a;
+    transition: 0.3s ease;
+    transform: translateY(-8 px);
+}
+
+@media only screen and (min-width: 600px) {
+   .col-s-1 {width: 8.33%;}
+   .col-s-2 {width: 16.66%;}
+   .col-s-3 {width: 25%;}
+   .col-s-4 {width: 33.33%;}
+   .col-s-5 {width: 41.66%;}
+   .col-s-6 {width: 50%;}
+   .col-s-7 {width: 58.33%;}
+   .col-s-8 {width: 66.66%;}
+   .col-s-9 {width: 75%;}
+   .col-s-10 {width: 83.33%;}
+   .col-s-11 {width: 91.66%;}
+   .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+   .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;}
+   .col-5 {width: 41.66%;}
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;}
+   .col-8 {width: 66.66%;}
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;}
+   .col-11 {width: 91.66%;}
+   .col-12 {width: 100%;}
+}
+/* ====== FOOTER STYLE ====== */
+.bakery-footer {
+  background-color: #f8e7c9;
+  color: #5a4634;
+  border-top: 2px solid #d4a373;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 25px;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h3 {
+  font-family: "Poppins";
+  color: #8b5e3c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-family: "Nunito";
+  font-size: 1.2rem;
+  color: #7a5530;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-family: "Josefin sans";
+  line-height: 1.6;
+  color: #5a4634;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  font-family: "Josefin sans";
+  text-decoration: none;
+  color: #5a4634;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #b87a4b;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #d4a373;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #8b5e3c;
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #d4a373;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.9em;
+  color: #7a5530;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

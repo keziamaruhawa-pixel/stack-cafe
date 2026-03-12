@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigasi</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+<body>
+    <div class="nav-container">
+        <h3>Menu</h3>
+        <nav>
+            <ul>
+                <li><a href="home.html" target="contentFrame">Home</a></li>
+                <li><a href="bread.html" target="contentFrame">Breads</a></li>
+                <li><a href="info.html" target="contentFrame">Information</a></li>
+                <li><a href="testimoni.html" target="contentFrame">Testimonials</a></li>
+                <li><a href="contact.html" target="contentFrame">Contact us</a></li>
+                <li><a href="purchase.html" target="contentFrame">Purchase</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <script>
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    alert("You have been logged out.");
+    window.top.location.href = "login.html";
+}
+</script>
+
+    <button onclick="logout()" class="logout-btn">Logout</button>
+
+</body>
+</html>

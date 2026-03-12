@@ -1,0 +1,202 @@
+/* ====== GLOBAL STYLE ====== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff8f0; /* cream soft */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+/* ====== CONTAINER ====== */
+.form-container {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  border: 1px solid #e7d6c2;
+}
+
+/* ====== TITLE ====== */
+.form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #4b2e0f; /* warna h1 home */
+}
+
+/* ====== LABEL ====== */
+label {
+  font-size: 14px;
+  margin-top: 12px;
+  display: block;
+  color: #86561A; /* warna tulisan home */
+}
+
+/* ====== INPUT ====== */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #d5c2aa;
+  font-size: 15px;
+  background: #fffdf9;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #b98d58;
+  outline: none;
+  box-shadow: 0 0 5px rgba(185,141,88,0.4);
+}
+
+/* ====== BUTTON ====== */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #b98d58;   /* brown mocha */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #86561A;
+}
+
+/* ====== LINK ====== */
+a {
+  color: #86561A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* small text */
+.small {
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+  color: #4b2e0f;
+}
+
+/* ====== SPINNER ====== */
+#spinner {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255,248,240,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 55px;
+  height: 55px;
+  border: 6px solid #e7d6c2;
+  border-top-color: #b98d58;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* ANIMASI BUY BUTTON */
+.buy-animated {
+    background: #b98d58;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-animated:hover {
+    background: #86561A;
+    transform: scale(1.05);
+}
+
+.buy-animated:active {
+    transform: scale(0.92);
+}
+
+/* POPUP INVOICE */
+.invoice-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.invoice-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    animation: pop 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes pop {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-inv {
+    width: 100%;
+    padding: 10px;
+    background: #b98d58;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.close-inv:hover {
+    background: #86561a;
+}
+body {
+    font-family: "Poppins";
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    background-image: url(assets/bread.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.form-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(2px);
+}
+/* ====== PAGE FADE-IN ANIMATION ====== */
+.fade-in {
+    animation: fade 0.9s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

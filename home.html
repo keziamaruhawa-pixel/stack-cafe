@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <style>
+        .text-box {
+            position: relative;
+            z-index: 10; 
+            isolation: isolate; 
+        }
+        
+        .text-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            border-radius: 0.2rem;
+            z-index: -1; 
+          
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.2), 
+                rgba(255, 255, 255, 0.85) 
+            );
+        }
+       
+        .container
+        {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        
+        .container header {
+            text-align: center;
+            color: #86561A;
+        }
+
+        .container header h1 {
+            font-family: 'Patrick Hand', cursive, 'Segoe UI', sans-serif;
+            font-size: 2.8rem;
+            margin: 0.15rem 0;
+            line-height: 1;
+            letter-spacing: 0.4px;
+            color: #4b2e0f;
+            text-decoration: none;          /* hapus underline/text-decoration */
+            border-bottom: none !important; /* override jika ada border */
+            box-shadow: none !important;    /* override jika ada shadow pseudo */
+            display: inline-block;          /* agar terlihat seperti doodle */
+        }
+
+        .container header h1::after,
+        .container header h1::before 
+          {
+            content: none !important;
+            display: none !important;
+          }
+    </style>
+</head>
+<body>
+  
+    <div class="text-box">
+      <div class="container">
+          <header>
+              <h1>Welcome to the Zaksly's!</h1>
+          </header>
+          <main>
+              <p>The best bakery in the city</p>
+
+              <p>We make many bread, please check our products</p>
+          </main>
+      </div>
+
+      <h1>Favourite Menu</h1>
+
+  
+      
+      <div class="menu-container">
+        <div class="menu-card">
+          <img src="https://cdn.medcom.id/dynamic/content/2018/07/18/903171/mB0qG2z9HF.jpg?w=1024" alt="Croissant">
+          <div class="menu-info">
+            <h2>Croissant</h2>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/720x0/webp/photo/2023/05/09/1515344444.jpg" alt="Baguette">
+          <div class="menu-info">
+            <h2>Baguette</h2>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvAROnhvV--kKS-Jyg2rfBsPM3ernVRbWmnc2A4VplaDU7qd6AHxI3665eyc9sfaAoi4&usqp=CAU" alt="Chocolate bread">
+          <div class="menu-info">
+            <h2>Chocolate bread</h2>
+          </div>
+        </div>
+    </div>
+
+    </div><!-- ====== FOOTER START ====== -->
+<footer class="bakery-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>🍞 The Zaksly's</h3>
+      <p>
+        We bake happiness every day! Our breads are made from organic ingredients, 
+        freshly prepared with love and passion.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="bread.html">Breads</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="testimoni.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p>📍 123<sup>rd</sup> Jl.nya when yah, Bekasi Regency, West Java</p>
+      <p>📞 +62 812 3456 7890</p>
+      <p>📧 hello@bakeryhouse.com</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="mailto:hello@bakeryhouse.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Bakery House — Freshly baked with ❤ every day</p>
+  </div>
+</footer>
+<!-- ====== FOOTER END ====== -->
+
+<!-- Font Awesome (ikon media sosial) -->
+ <!-- ==== LOGIN PROTECTION ==== -->
+<script>
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
+</script>
+
+
+<!-- ==== OPTIONAL: TOMBOL LOGOUT ==== -->
+<script>
+function logout(){
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    alert("You have been logged out.");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

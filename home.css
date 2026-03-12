@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  font-family: "Poppins";
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  background-image: url(assets/bread.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8e7c9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.container:nth-of-type {
+  animation-delay: 0.3s;
+}
+header {
+  text-align: center;
+  color: #86561a; /* cokelat hangat */
+}
+
+header h1 {
+  display: inline-block;
+  font-family: "Patrick Hand", "Segoe UI", sans-serif;
+  font-size: 3rem;
+  color: #4b2e0f;
+  margin: 0.2rem 0;
+  letter-spacing: 0.6px;
+  transform-origin: center;
+  /* sedikit efek tinta/handwriting */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 3px 8px rgba(0, 0, 0, 0.08);
+  animation: doodle-wiggle 4s ease-in-out infinite;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) scaleX(0);
+  width: 120%;
+  height: 10px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='30'><path d='M5 20 q50 -20 100 0 q50 20 190 0' stroke='%2386521A' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: center;
+  animation: sketch-draw 0.9s cubic-bezier(0.2, 0.9, 0.3, 1) forwards 0.15s;
+  pointer-events: none;
+}
+/* optional: responsif kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes doodle-wiggle {
+  0% {
+    transform: rotate(-0.8deg);
+  }
+  25% {
+    transform: rotate(0.8deg) translateY(-1px);
+  }
+  50% {
+    transform: rotate(-0.6deg);
+  }
+  75% {
+    transform: rotate(0.6deg) translateY(-1px);
+  }
+  100% {
+    transform: rotate(-0.8deg);
+  }
+}
+
+/* animasi menggambar underline */
+@keyframes sketch-draw {
+  from {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* optional: responsif kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background-color: #f3e5ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Poppins";
+  color: #4b2e05;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.container p {
+  font-family: "Josefin sans";
+  font-size: 1rem;
+  color: #7a5530;
+  font-style: italic;
+}
+
+/* ====== MENU CARD CONTAINER ====== */
+.menu-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+/* ====== INDIVIDUAL CARD ====== */
+.menu-card {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+  background-color: #fff;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+  transition: 0.4s;
+}
+
+.menu-card:hover,
+.menu-card.active {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.menu-card:hover img,
+.menu-card.active img {
+  filter: brightness(60%);
+}
+
+/* ====== INFO SECTION ON CARD ====== */
+.menu-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+.menu-info h2 {
+  font-family: "Nunito";
+  margin: 0;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  .menu-card {
+    width: 220px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+/* ====== FOOTER STYLE ====== */
+.bakery-footer {
+  background-color: #f8e7c9;
+  color: #5a4634;
+  border-top: 2px solid #d4a373;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 25px;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h3 {
+  font-family: "Poppins";
+  color: #8b5e3c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-family: "Nunito";
+  font-size: 1.2rem;
+  color: #7a5530;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-family: "Josefin sans";
+  line-height: 1.6;
+  color: #5a4634;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  font-family: "Josefin sans";
+  text-decoration: none;
+  color: #5a4634;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #b87a4b;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #d4a373;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #8b5e3c;
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #d4a373;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.9em;
+  color: #7a5530;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
